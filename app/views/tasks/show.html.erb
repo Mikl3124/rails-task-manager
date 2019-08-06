@@ -1,0 +1,10 @@
+<h1> <%= @task.title %> </h1>
+
+<%= @task.details %>
+
+<%= link_to tasks_path, method: :get do %><i class="fas fa-undo-alt"></i><% end %>
+
+<%= link_to edit_path(@task), method: :get do %><i class="fas fa-pencil-alt"></i> <% end %>
+
+
+<%= link_to task_path(@task), method: :delete, data:{ confirm: "Delete this task?"} do %><i class="fas fa-trash-alt"></i> <% end %>
